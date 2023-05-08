@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Капібара</title>
+	<style>
+		.container {
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Trebuchet MS', sans-serif;;
+
+}
+.container:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,1) 100%);
+}
+
+ .text1 {
+  /* background-color: rgba(253, 221, 183, 1); */
+  color: white;
+  padding: 10px;
+  max-width:60%;
+  margin: 0 auto;
+  font-size:20px;
+  font-family:'Courier New', monospace;
+  font-weight:500 ;
+
+}
+ .text2 {
+  background-color: #f5f5f5;
+  padding: 10px 10px 10px 10px ;
+  max-width:25%;
+  float: left;
+  margin: 15px 0px 0px 25px;
+  font-size:20px;
+  font-family:'Courier New', monospace;
+}
+.text3 {
+  background-color: #f5f5f5;
+  padding: 10px;
+  max-width:78%;
+  margin: 15px 25px 0px 430px;
+ 
+  font-size:20px;
+  font-family: 'Courier New', monospace;
+
+}
+.text4 {
+  color: white;
+  padding: 10px;
+  max-width:100%;
+  margin: 15px 200px 0px 200px;
+  float: center;
+
+ 
+  font-size:20px;
+  font-family: 'Courier New', monospace;
+
+}
+.text5 {
+  background-color: #f5f5f5;
+  padding: 5px;
+  max-width:80%;
+  margin: 0 auto;
+ 
+  font-size:20px;
+  font-family: 'Courier New', monospace;
+}
+.colortext {
+color: #FFB272; /* оранжевий колір виділення */
+font-weight:600 ;
+}
+.leftimg {
+float:left; /* Вирівнювання по лівому краю */
+margin: 7px 7px 7px 0; /* Відступи навколо картинки */
+}
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.menu li {
+  display: inline;
+
+}
+.menu a {
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  color: #916D3C;
+  display: inline-block;
+  padding: 40px 40px; 
+  background-color: white;
+  border-bottom: 5px solid #916D3C;
+}
+.menu li {
+  margin-right: -5px;
+
+
+}
+a:hover {
+  color: black;
+  background-color: orange;
+  text-decoration: underline;
+}
+.wrapper ::selection {
+background: #FFC841;
+color: #fff;
+}
+.wrapper ::-moz-selection {
+background: #FFC841;
+color: #fff;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+#capyFacts {
+  list-style-image: url('images/200kap.png')  ;
+  margin-left: 200px;
+  margin-right: 100px;
+  border-right: 3px dotted; white ;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  font-size: large;
+  float: center;
+  /*background-color:#FFC841 ;*/
+
+ 
+}
+#korusno {
+	color: black;
+	background-color: whitesmoke;
+	font-family:'Courier New', monospace; 
+	font-size: larger;
+	padding: 10px;
+	margin: 20px 200px 10px 40px;
+	font-weight: 700;
+}
+.gallery {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+      .gallery a {
+         display: block;
+         margin: 10px;
+      }
+      .gallery img{
+         height: 200px;
+         width: 250px;
+      }
+      .lightbox {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.7);
+         justify-content: center;
+         align-items: center;
+      }
+      .lightbox img {
+         max-width: 90%;
+         max-height: 90%;
+         }
+      .close {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         font-size: 30px;
+         background-color: white;
+         border: none;
+         padding: 10px 15px;
+         cursor: pointer;
+      }
+
+   #форма {
+	width: 100% ;
+	height: 100%;
+	/*background: #f5ffb5;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 40px;
+	font-size: 140%;
+
+}
+form{
+	background: white ;
+	display: flex;
+	flex-direction: column;
+	padding: 2vw 4vw;
+	width: 70%;
+	max-width: 400px;
+	border-radius: 10px;
+}
+form textarea, input{
+	border: 0;
+	margin: 10px 0;
+	padding: 20px;
+	outline: none;
+	font-size: 16px;
+
+}
+form button{
+	padding: 15px;
+	margin: 20px;
+	background:#ffd900 ;
+	color: white;
+	font-size: 18px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	display: inline;
+	width: 150px;
+	border-radius: 30px;
+
+
+}
+</style>
+</head>
+<body style="background-color:#000000;" class="wrapper">
+		 <div id="myHeader">
+  <ul class="menu">
+  	<a href="http://www.lyceum4.cv.ua/"target="_blank"><img src="images/школа.jpg" height="40" ></a>
+  <li><a href="#головна"target="_self">Головна</a></li>
+  <li><a href="#про капібар"target="_self">Про капібар</a></li>
+  <li><a href="#факти"target="_self">Факти</a></li>
+  <li><a href="#розмноження"target="_self">Розмноження</a></li>
+  <li><a href="#ареал"target="_self">Ареал проживання</a></li>
+  <li><a href="#фото"target="_self">Фото та відео </a></li>
+  <li><a href="#ресурси"target="_self">Корисні ресурси</a></li>
+</ul>
+</div>
+	
+	 <div class="container" id="головна">
+	 	<img src="images/kapibaras3.jpg" alt="велика розтягнута Капібара" width="100%" height="550"  ><div class="centered"><h1 align="center"style="font-size:150px;" >Капібара</h1>    <h4 align="center"style="font-size:50px;" >створено Білек Іриною</h4></div> -->
+
+	 </div>
+	 <br>
+	 <hr>
+
+	 <!--<a href="наступна сторінка.html" target=_blank title="нажміть, аби перейти на наступну сторінку" style="font-size:300%;"  >
+	 	перейти на наступну сторінку
+	 </a></!-->
+	 
+	 <div class="text1">
+	 	<p>Кому не подобаються капібари? Милі водосвинки, що можуть не тільки можуть їсти кавуни і чаляпатися у воді, але й стати екзотичним домашнім улюбленцем. Ця сторінка повністю присвячена цим надзвичайно цікавим істотам, і, сподіваюсь, вона надихне молодь на більш детальне вивчення цієї тварини.</p>
+	 </div>	
+	 <div class="text2">
+	 	<h2 id="про капібар">КАПІБАРА: біологічна класифікація</h2>
+	 	<p>
+	 		<span class="colortext">Царство</span>:	Тварини (Animalia)
+	 		<br>
+	 		<br>
+            <span class="colortext">Тип:</span>	Хордові (Chordata)
+            	<br>
+            	<br>
+<span class="colortext">Клада</span>:	Синапсиди (Synapsida)
+	<br>
+	<br>
+<span class="colortext">Клас</span>:	Ссавці (Mammalia)
+	<br>
+	<br>
+<span class="colortext">Ряд</span>:	Мишоподібні (Rodentia)
+	<br>
+	<br>
+<span class="colortext">Родина</span>:	Кавієві (Caviidae)
+	<br>
+	<br>
+<span class="colortext">Підродина</span>:	Капібарові (Hydrochoerinae)
+	<br>
+	<br>
+<span class="colortext">Рід</span>:	Капібара (Hydrochoerus)
+	
+	 	</p>
+	 </div>	
+
+
+<div class="text3">
+	<p>
+		<hr>
+      <span class="colortext">Капібара</span>, або велика капібара - найбільший з живих гризунів, що мешкає на території Південної Америки. Єдиний інший вид цього роду - <span class="colortext">менша капібара</span>. Його близькими родичами є свинки та кам'яні каві, а він сам дещо далі пов'язаний з агуті, шиншилами та нутріями. Капібара мешкає на саванах та густій рослинності лісів, біля водойм. Вона дуже соціальна тварина і може зустрічатись у групах розміром до 100 особин, але зазвичай живе у групах 10-20 особин. За капібарою полюють за м'ясом та шкурою, а також за жиром з її густої жирової шкіри, проте цей вид не вважається під загрозою вимирання. 
+    </p>
+    <br>
+    <p>Капібари - це короткошерсті коричневі гризуни з тупими мордами, короткими ногами, малими вухами та майже відсутнім хвостом. Вони сором'язливі та утворюють групи вздовж берегів озер та річок. Зазвичай вони живляться вранці та ввечері та більшу частину дня проводять спочиваючи під прикриттям вздовж берегів. Вони є <span class="colortext">вегетаріанцями</span> і в культивованих зонах іноді стають шкідниками, що їдять дині, зерно та кабачки. Вони легко плавають та занурюються, і часто входять у воду, щоб уникнути хижаків, таких як ягуари та анаконди. Самиці народжують одне окотом від трьох до восьми дитинчат щороку; вагітність триває приблизно 100-110 днів.</p>
+    
+    <hr>
+
+</div>
+<br>
+<hr>
+<br>
+<br>
+
+<div class="text4" >
+<img src="images/orangeskapibara.jpg" alt="капібара з апельсинами" height="200"   >
+<img src="images/orangeskapibara2.jpg" alt="капібара з апельсинами" width="300"   >
+<img src="images/flowerkapibara.jpg" alt="капібара" width="300"   >
+</div>
+<hr>
+<div class="text4">
+	<br>
+	<br>
+	<h3 style="color: white; margin-left: 100px;" id="факти">Факти про капібар</h3>
+	<br>
+	<p>
+		<ul >
+			<li>
+				Назва цього південноамериканського гризуна походить із мови<span class="colortext"> гуарані</span>. Дослівно вона перекладається як <span class="colortext">«господар трави»</span>, що натякає на причетність цих гризунів до травоїдних тварин.
+
+			</li>
+			<br>
+
+ 
+        <li>Капібари мають <span class="colortext">короткі кінцівки</span>, що закінчуються частково перетинчастими пальцями. Передні кінцівки характеризуються наявністю чотирьох пальців, у той час як на задніх – по три пальці. На пальцях є короткі та потужні пазурі. На відміну від деяких гризунів капібара не має хвоста.</li>
+        <br>
+        <img src="images/kapibaras_leg.jpg" alt="капібара з апельсинами" height="200"   >
+         <img src="images/kapibarasit.jpg" alt="капібара з апельсинами" height="200" >
+           <img src="images/kapibarassit.jpg" alt="капібара з апельсинами" height="200" >
+           <br>
+           <br>
+
+
+        <li>
+        	<span class="colortext">Забарвлення</span> тварини коливається від темно-коричневого до червоного і від світло-коричневого до світло-жовтого. Волосся покриває <span class="colortext">потові залози</span>, які унікальні для капібар. Ці тварини є єдиними гризунами, які мають потові залози у волоссі.
+        </li>
+        <br>
+        <li>
+        	<span class="colortext">Череп</span> масивний, з широкими і сильними виличними дугами. Зубів 20. Щокові зуби без коріння, ростуть протягом всього життя тварини. Різці широкі, мають подовжню борозенку на зовнішній поверхні. Мала і велика <span class="colortext">гомілкові кістки</span> частково зростаються між собою. Ключиці немає.
+
+        	 <img src="images/skeleton_kapibara.jpg" alt="капібара з апельсинами"    >
+        </li>
+        <br>
+        <li>
+        	Капібара чудово <span class="colortext">плаває</span> і пірнає; високе розташування на голові очей, вух і ніздрів дозволяє їй при плаванні тримати їх над водою. Зазвичай активна вранці і вечором, рідше вночі. Годується переважно увечері. У місцях, де її часто непокоять, переходить до нічного способу життя. Під час денної спеки відпочиває в <span class="colortext">неглибоких укриттях</span>, на мілководді або затінених ділянках неподалік від води; приймає грязьові ванни. Нір і кубел не будує, лігво влаштовує прямо на землі.
+        </li>
+        <br>
+        <li>
+        	Капібари – <span class="colortext">травоїдні</span> тварини, які переважно харчуються водними рослинами, травою, очеретом, корою дерев, зерном, зеленим листям (в основному маніока), а також овочами, такими як сквош, та фруктами, включаючи банани та дині. У вологих саванах харчуються просом. Рослини, які споживаються влітку, вони не їдять взимку через <span class="colortext">зниження поживної цінності</span>. Подекуди, вони харчуються власними фекаліями.
+        </li>
+        <br>
+        <li>
+        	Головними природними ворогами є<span class="colortext"> ягуари, крокодилячі каймани і анаконди</span>.
+
+        </li>
+        <br>
+        <li>
+        	Капібари спілкуються між собою за допомогою запаху, який виділяють їхні залози, та звуку. Вони мають ряд різних <span class="colortext">вокалізацій</span>, включаючи свист, бурчання, гавкіт та верещання.
+            Велика капібара, помітивши небезпеку, видає гучні хрипкі звуки, що нагадують кашель. Почувши їх, вся група завмирає, а потім кидається у воду і стрімко відпливає від берега. За потреби гризуни пірнають і залишаються під водою до <span class="colortext">5 хвилин поспіль</span>. Почуваючи себе в безпеці, вони спілкуються за допомогою <span class="colortext">тихого свисту та покашлювання</span>.
+            <br>
+             <br>
+
+            <audio  controls src="capybara.mp3"></audio>
+        </li>
+
+        </ul>
+	</p>
+	
+</div>
+<div class="text5">
+	<p>
+		
+        	<h3 id="розмноження">Розмноження</h3>
+        	
+        	  Капібар стає статевозрілою, коли досягає маси тіла 30 кг, яка зазвичай збігається з віком 1,5 року. Вагітність триває близько <span class="colortext">150 днів</span>. Зазвичай самка народжує 4-6 дитинчат. Малюки народжуються покриті шерстю, з відкритими очима і зубами, що прорізалися. Вага новонароджених до 1,5 кг. У капібар з <span class="colortext">Парагваю</span> зазвичай з’являється на світ від одного до чотирьох дитинчат; це менше, ніж у водосвинок із інших регіонів. Спарювання зазвичай відбувається на <span class="colortext">початку сезону дощів</span>, який починається приблизно у квітні чи травні. Якщо житла багаті на ресурси, капібари можуть розмножуватися більше одного разу на рік. Дитинчата народжуються повністю покритими хутром, з відкритими очима та <span class="colortext">повним набором</span> зубів. Вони харчуються материнським молоком протягом трьох-чотирьох місяців, але молоко не є основним джерелом їх поживних речовин. <span class="colortext">Трави</span> – основний внесок у раціон капібар як для дорослих, так і для молодих особин. Відразу після відлучення від грудей мати проганяє своїх нащадків і залишає їх <span class="colortext">напризволяще</span>.
+
+З цієї причини смертність серед молодих тварин у перший рік дуже висока. Від <span class="colortext">хижаків</span> гинуть до 50% молоді. Дорослі ніколи не захищають своїх малюків, обмежуючись лише попередженнями про хижаків, що знаходяться поблизу. У підсумку вижити мають шанс лише самі обережні гризуни.
+        	  
+
+    </p>
+    <br>
+	<h3 id="ареал">Ареал проживання капібар</h3>
+	<img src="images/ареал проживання капібар.png" alt="карта де є капібари" class="leftimg"   >
+	<!--  <img src="images/languagekapibara.jpg" alt="лангуаге капібара" height="300"  >   -->
+	<p >
+		  Капібара трапляється на берегах різноманітних водойм в тропічних і помірних частинах <span class="colortext">Південної Америки</span> на схід від Анд — від Колумбії до Уругваю і північного сходу Аргентини, у всіх країнах південної америки, окрім <span class="colortext">Чилі</span>. Ареал включає басейни річки Ориноко, Амазонки і Ла-Плати. Основними чинниками, що обмежують розповсюдження, є температура повітря і води. У горах капібари зустрічаються до висоти 1 300 м над рівнем моря. Капібари зустрічаються тільки в районах, де вода легко доступна: затоплені луки є їх переважним середовищем , але також вони зустрічаються в заболочених районах і низовинних лісах, де є хороші пасовища, і вода доступна цілий рік. Проте ці гризуни займають цілу низку місць проживання, включаючи сухий ліс, чагарники і луки.
+		</p>
+
+         <p>
+         	В Панамі, північній Колумбії та північно-західній Венесуелі мешкає карликовий родич капібари — <span class="colortext">мала капібара</span>, що до 1991 року вважалася її підвидом. За розмірами мала капібара помітно менше звичайної.
+	     </p>
+
+</div>
+<br>
+<center>
+<img src="images/vodakapibara.jpg" alt="капібари біля води" height="900" title="краса, чи не так?"  >
+</center>
+
+<h2 style= "color: #FFC623 ; margin-left: 120px; margin-right: 1050px; font-size: 240%; font-family:'Courier New', monospace ; background-color:white;">А чи знали ви?</h2>
+  
+
+  <div id="capyFacts">
+<ul  >
+  <li>У <span class="colortext">Венесуелі</span> капібар довгий час нещадно винищували через те, що на переконання тамтешніх фермерів вони поїдали багато зелені, позбавляючи худобу кормів. Насправді ж доведено, що звичка капібар пастися на низькорослій траві біля самої води зовсім не шкодить великій рогатій худобі.
+</li>
+  <li>Палеонтологічні знахідки показують, що в давнину землю населяли предки капібар <span class="colortext">завбільшки з ведмедя</span>!
+</li>
+  <li>Тісний зв'язок цих тварин із водою свого часу призвів до того, що католицька церква близько 300 років тому <span class="colortext">зарахувала капібар до риб</span>! Внаслідок такого казусу м'ясо капібар дозволили їсти під час <span class="colortext">посту</span>.
+</li>
+<li>
+	  В <span class="colortext">Японії</span> дуже люблять капібар – вони живуть не лише у зоопарках, а й у парках, на гарячих джерелах та стайнях. У культурі країни капібари знайшли свій відбиток у милому персонажі <span class="colortext">Капібара-сан </span>(Містер Капібара), якого вигадав виробник іграшок Bandai у 2005 році. Зараз випускається понад 5 тисяч речей, зокрема м'які іграшки, канцтовари та комікси.
+
+</li>
+</ul>
+</div>
+<div id="korusno">
+	<h2 id="ресурси">Корисні ресурси</h2>
+	<p>
+		Тут ви зможете знайти корисні ресурси, щоб дізнатися більше про капібар та добре провести час з розважальними ресурсами про цих чудових істот.
+	</p>
+	<ul>
+		<li>Аккаунт у застосунку "Tik-tok" під ніком <span class="colortext">capyeveryday</span> https://www.tiktok.com/@capyeveryday публікує відео про капібар у вигляді знаменитостей кожен день.<a href="https://nv.ua/ukr/lifestyle/kapibara-na-kozhen-den-ukrajinskiy-tiktok-akkaunt-publikuye-video-z-grizunami-vidatnih-ukrajinciv-50278194.html" target="_blank" style="color: #c296ff; font-size: larger;" >ресурс</a>
+			<br>
+			<video  controls src="президент.mp4" height="300" width="200" class="leftimg"></video>
+			<p style="font-size:120%; font-weight: 500;">
+				<br>
+			На цьому відео-кліпі можна побачити справді рідкісний вид капібар - капібару президента. При подальшому ознайомленні з цим тік-токером можна дізнатися багато чого нового, про раціон капібар, Їхні улюбленні місця для проведення дозвілля та багато іншого. Але найголовніше - заряджатися енергією від перегляду копібар кожен день!
+			</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+		</li>
+	</ul>
+</div>
+<h2 style="background-color: white; color: black; font-family: 'Courier New', monospace ; font-size: xx-large; margin-right: 50% ; margin-left: 10%; " id="фото">Фото капібар</h2>
+
+<div class="gallery">
+      <a href="image1.jpg">
+         <img src="images/dogkapibara.jpg" alt="Image 1">
+      </a>
+      <a href="image2.jpg">
+         <img src="images/dogskapibara.jpg" alt="Image 2">
+      </a>
+      <a href="image3.jpg">
+         <img src="images/birdkapibara.jpg" alt="Image 1">
+      </a>
+      <a href="image4.jpg">
+         <img src="images/applekapibara.jpg" alt="Image 1">
+      </a>
+
+   </div>
+   <div class="lightbox">
+      <img src="">
+      <button class="close">X</button>
+   </div>
+   <br>
+      <br>
+         <br>
+            <br>
+               <br>
+                  <br>
+
+ 
+
+
+<div id="форма">
+
+   <form action="https://formsubmit.co/iirabilek@gmail.com" method="POST">
+   	<label for="like" style="color: black;">Чи подобається вам наша сторінка?</label>
+   	<input type="email" id="email" placeholder="Email" name="email" required>
+   	<textarea id="like" rows="8" placeholder="написати відгук" name="vidgyk" required ></textarea> 
+   	<!--type="text" name="like" id="like" placeholder="написати відгук" required>-->
+
+   	<div>
+   		<button type="reset">Очистити</button>
+   	</div>
+
+
+   	<div>
+   		<button type="submit" > Надіслати</button> 
+   	</div>
+   </form>
+   </div>
+
+
+<!-- руханка навігаційної панелі -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+<script>
+      const gallery = document.querySelector('.gallery');
+      const lightbox = document.querySelector('.lightbox');
+      const close = document.querySelector('.close');
+      const lightboxImg = lightbox.querySelector('img');
+      gallery.addEventListener('click', function (event) {
+         event.preventDefault();
+         lightbox.style.display = 'flex';
+         lightboxImg.src = event.target.src || event.target.parentNode.href;
+      });
+      close.addEventListener('click', function () {
+         lightbox.style.display = 'none';
+      });
+   </script>
+
+
+
+   <!-- <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script> 
+   <script type="text/javascript">
+   	function sendEmail() {Email.send({
+    Host : "smtp.gmail.com",
+    Username : "iirabilek@gmail.com",
+    Password : "maraClavyta2002",
+    From : document.getElementById("email").value,
+    To : 'iirabilek@gmail.com',
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+   		// body...
+   	}
+   	
+
+
+   </script>-->
+<!--  -->
+
+<!-- <script type="text/javascript"> 
+	
+	alert( 'Дякую, що зайшли на мою сторінку' );
+</script>
+-->
+
+</body>
+</html>
