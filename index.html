@@ -5,6 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Капібара</title>
 	<style>
+
+
+
+
+
+/*центрово, але не суперово*/
+    /*div {
+      display: grid;
+      align-content: center;
+      align-items: center;
+    }
+*/
+
 		.container {
   position: relative;
   text-align: center;
@@ -195,6 +208,7 @@ color: #fff;
          padding: 10px 15px;
          cursor: pointer;
       }
+      
 
    #форма {
 	width: 100% ;
@@ -222,6 +236,7 @@ form textarea, input{
 	padding: 20px;
 	outline: none;
 	font-size: 16px;
+  resize: none;
 
 }
 form button{
@@ -239,6 +254,35 @@ form button{
 
 
 }
+
+
+
+.videos{
+  /*display: flex;*/
+  /*justify-content: space-evenly;*/
+  background-image: url("images/wallpaper3.jpg") ;
+
+    padding: 50px 0px 50px 0px;
+    
+
+}
+
+.videos2{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 0px 10px 0px;
+}
+.ulvideo
+      {
+        font-family:'Courier New', monospace; 
+        font-size: 140%;
+        color: white;
+        font-weight: 800;}
+
+
+
+
+
 </style>
 </head>
 <body style="background-color:#000000;" class="wrapper">
@@ -248,10 +292,12 @@ form button{
   <li><a href="#головна"target="_self">Головна</a></li>
   <li><a href="#про капібар"target="_self">Про капібар</a></li>
   <li><a href="#факти"target="_self">Факти</a></li>
-  <li><a href="#розмноження"target="_self">Розмноження</a></li>
+  <!-- <li><a href="#розмноження"target="_self">Розмноження</a></li> -->
   <li><a href="#ареал"target="_self">Ареал проживання</a></li>
-  <li><a href="#фото"target="_self">Фото та відео </a></li>
   <li><a href="#ресурси"target="_self">Корисні ресурси</a></li>
+  <li><a href="#фото"target="_self">Фото та відео </a></li>
+  <li><a href="#відгук"target="_self">Залишити відгук</a></li>
+  
 </ul>
 </div>
 	
@@ -329,7 +375,7 @@ form button{
 	<p>
 		<ul >
 			<li>
-				Назва цього південноамериканського гризуна походить із мови<span class="colortext"> гуарані</span>. Дослівно вона перекладається як <span class="colortext">«господар трави»</span>, що натякає на причетність цих гризунів до травоїдних тварин.
+				Назва цього південноамериканського гризуна походить із мови<span class="colortext"> гуарані</span>. Дослівно вона перекладається як «господар трави»</span>, що натякає на причетність цих гризунів до травоїдних тварин.
 
 			</li>
 			<br>
@@ -452,7 +498,7 @@ form button{
 		</li>
 	</ul>
 </div>
-<h2 style="background-color: white; color: black; font-family: 'Courier New', monospace ; font-size: xx-large; margin-right: 50% ; margin-left: 10%; " id="фото">Фото капібар</h2>
+<h2 style="background-color: white; color: black; font-family: 'Courier New', monospace ; font-size: xx-large; margin-right: 50% ; margin-left: 10%; " id="фото">Фото та відео капібар</h2>
 
 <div class="gallery">
       <a href="image1.jpg">
@@ -462,10 +508,10 @@ form button{
          <img src="images/dogskapibara.jpg" alt="Image 2">
       </a>
       <a href="image3.jpg">
-         <img src="images/birdkapibara.jpg" alt="Image 1">
+         <img src="images/birdkapibara.jpg" alt="Image 3">
       </a>
       <a href="image4.jpg">
-         <img src="images/applekapibara.jpg" alt="Image 1">
+         <img src="images/applekapibara.jpg" alt="Image 4">
       </a>
 
    </div>
@@ -476,17 +522,41 @@ form button{
    <br>
       <br>
          <br>
-            <br>
-               <br>
-                  <br>
 
- 
+<div class="videos">
+  <div class="videos2">
+  
+  
+
+         <video src="images/melonvscapy.mp4" height="250" controls  ></video>
+         <video src="images/orangescapy.mp4" height="250" controls poster="images/orangeskapibara.jpg" ></video> 
+
+   </div>           
+             
+
+              
+                <br>
+             <ul class="ulvideo">
+              <li>
+                 На <span class="colortext">першому відео</span> ми будемо свідками епічного протистояння між кількома капібарами та <span class="colortext">величезним кавуном </span>. Чи вдасться їм подолати ягоду-гіганта?
+              </li>
+              <br>
+                <li>
+                  На <span class="colortext">другому відео</span> ми зможемо подивитися, як капібари проводять свій час у Японії. Але - стається непередбачуванне - у однієї капібари на голові <span class="colortext">мандарин</span>! Люди у захваті. А які ваші враження від побаченного? Можете залишити свій відгук у кінці сторінки і поділитися ним.
+                  </li>
+                
+                </ul>
+              
+              <br>
+              <br>
 
 
-<div id="форма">
+<div id="форма" >
 
-   <form action="https://formsubmit.co/iirabilek@gmail.com" method="POST">
-   	<label for="like" style="color: black;">Чи подобається вам наша сторінка?</label>
+   <form action="https://formsubmit.co/iirabilek@gmail.com" method="POST" id="відгук">
+   	<label for="like" style="color: black;">Чи подобається вам наша сторінка?
+      <br>
+    Напишіть відгук! </label>
    	<input type="email" id="email" placeholder="Email" name="email" required>
    	<textarea id="like" rows="8" placeholder="написати відгук" name="vidgyk" required ></textarea> 
    	<!--type="text" name="like" id="like" placeholder="написати відгук" required>-->
@@ -501,6 +571,9 @@ form button{
    	</div>
    </form>
    </div>
+
+
+    </div>
 
 
 <!-- руханка навігаційної панелі -->
